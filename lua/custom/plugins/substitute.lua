@@ -7,10 +7,10 @@ return {
   },
   config = function()
     require('substitute').setup {
-      vim.keymap.set('n', 'gs', require('substitute').operator, { noremap = true }),
-      vim.keymap.set('n', 'gss', require('substitute').line, { noremap = true }),
-      vim.keymap.set('n', 'gS', require('substitute').eol, { noremap = true }),
-      vim.keymap.set('x', 'gs', require('substitute').visual, { noremap = true }),
+      vim.keymap.set('n', 'gs', require('substitute').operator, { desc = 'substitute operation', noremap = true }),
+      vim.keymap.set('n', 'gss', require('substitute').line, { desc = 'substitute line', noremap = true }),
+      vim.keymap.set('n', 'gS', require('substitute').eol, { desc = 'substitute eol', noremap = true }),
+      vim.keymap.set('x', 'gs', require('substitute').visual, { desc = 'substitute visual', noremap = true }),
     }
   end,
 }
