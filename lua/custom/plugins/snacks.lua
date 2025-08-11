@@ -1,6 +1,5 @@
 return {
   'folke/snacks.nvim',
-  enabled = false,
   lazy = false,
   config = function()
     require 'custom.config.snacks'
@@ -10,24 +9,24 @@ return {
     end
 
     -- all keymaps for snacks.picker
-    map('<leader>sf', Snacks.picker.smart, 'Smart find file')
+    -- map('<leader>sf', Snacks.picker.smart, 'Smart find file')
     map('<leader>so', Snacks.picker.recent, 'Find recent file')
-    map('<leader>sw', Snacks.picker.grep, 'Find content')
-    map('<leader>sh', function()
-      Snacks.picker.help { layout = 'dropdown' }
-    end, 'Find in help')
+    -- map('<leader>sw', Snacks.picker.grep, 'Find content')
+    -- map('<leader>sh', function()
+    --   Snacks.picker.help { layout = 'dropdown' }
+    -- end, 'Find in help')
     map('<leader>sl', Snacks.picker.picker_layouts, 'Find picker layout')
     map('<leader>sk', function()
       Snacks.picker.keymaps { layout = 'dropdown' }
     end, 'Find keymap')
-    map('<leader><leader>', function()
-      Snacks.picker.buffers { sort_lastused = true }
-    end, 'Find buffers')
+    -- map('<leader><leader>', function()
+    --   Snacks.picker.buffers { sort_lastused = true }
+    -- end, 'Find buffers')
     map('<leader>sm', Snacks.picker.marks, 'Find mark')
     map('<leader>sn', function()
       Snacks.picker.notifications { layout = 'dropdown' }
     end, 'Find notification')
-    map('grr', Snacks.picker.lsp_references, 'Find lsp references')
+    -- map('grr', Snacks.picker.lsp_references, 'Find lsp references')
     map('<leader>ss', Snacks.picker.lsp_workspace_symbols, 'Find workspace symbol')
     map('<leader>ss', function()
       local bufnr = vim.api.nvim_get_current_buf()
@@ -59,10 +58,10 @@ return {
     map('<leader>sb', Snacks.picker.lines, 'Find lines in current buffer')
     map('<leader>sd', Snacks.picker.diagnostics, 'Find diagnostic')
     map('<leader>sH', Snacks.picker.highlights, 'Find highlight')
-    map('<leader>sc', function()
-      Snacks.picker.files { cwd = vim.fn.stdpath 'config' }
-    end, 'Find nvim config file')
-    map('<leader>s/', Snacks.picker.search_history, 'Find search history')
+    -- map('<leader>sc', function()
+    --   Snacks.picker.files { cwd = vim.fn.stdpath 'config' }
+    -- end, 'Find nvim config file')
+    -- map('<leader>s/', Snacks.picker.search_history, 'Find search history')
     map('<leader>sj', Snacks.picker.jumps, 'Find jump')
     map('<leader>st', function()
       if vim.bo.filetype == 'markdown' then
