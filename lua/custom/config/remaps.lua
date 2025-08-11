@@ -1,0 +1,10 @@
+-- 自定义快捷键
+vim.keymap.set('i', 'jj', '<Esc>', { desc = 'To normal mode' })
+vim.keymap.set('n', 'fe', ':GoIfErr<CR>', { desc = 'Go if err' })
+vim.keymap.set('n', 'fs', ':GoFillStruct<CR>', { desc = 'Fill Struct in Go' })
+vim.keymap.set('n', '<leader>fc', ':GoFillSwitch<CR>', { desc = 'Fill Switch in Go' })
+vim.keymap.set('n', '<leader>ta', ':GoAddTag<CR>', { desc = 'Add tag in Go' })
+vim.keymap.set('n', '<leader>tr', ':GoRmTag<CR>', { desc = 'Remove tag in Go' })
+vim.keymap.set('n', '<leader>tc', ':GoClearTag<CR>', { desc = 'Clear tag in Go' })
+vim.keymap.set('n', '<leader>i', ':GoImports<CR>', { desc = 'Go imports' })
+vim.keymap.set('n', '<leader>a', ':BlameToggle<CR>', { desc = 'Toggle git blame' })
