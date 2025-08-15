@@ -15,7 +15,7 @@ return {
     map('<leader>sn', function()
       Snacks.picker.notifications { layout = 'dropdown' }
     end, 'Find notification')
-    -- map('grr', Snacks.picker.lsp_references, 'Find lsp references')
+    map('grr', Snacks.picker.lsp_references, 'Find lsp references')
     map('<leader>si', Snacks.picker.icons, 'Find icon')
     map('<leader>sb', Snacks.picker.lines, 'Find lines in current buffer')
     map('<leader>sd', Snacks.picker.diagnostics, 'Find diagnostic')
