@@ -540,7 +540,7 @@ require('lazy').setup({
 
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
-          map('<leader>r', vim.lsp.buf.rename, '[R]e[n]ame')
+          map('grn', vim.lsp.buf.rename, '[R]e[n]ame')
 
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.
@@ -676,8 +676,13 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         gopls = {
+          completeUnimported = true,
+          usePlaceholders = true,
           gofumpt = true,
           buildFlags = { '-tags=integration' },
+          analyses = {
+            unusedparams = true,
+          },
         },
         -- pyright = {},
         -- rust_analyzer = {},
@@ -774,7 +779,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        go = { 'gofumpt' },
+        go = { 'gofmt', 'golines' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
